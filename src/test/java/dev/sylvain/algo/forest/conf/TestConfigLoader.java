@@ -40,6 +40,7 @@ public class TestConfigLoader {
 		assertTrue("10".equals(props.getProperty(Constants.PROP_GRID_WIDTH)));
 		assertTrue("5".equals(props.getProperty(Constants.PROP_GRID_HEIGHT)));
 		assertTrue("0.5".equals(props.getProperty(Constants.PROP_PROBABILITY)));
+		assertTrue("3,3".equals(props.getProperty(Constants.PROP_START_POSITIONS)));
 	}
 	
 	@Test
@@ -54,6 +55,7 @@ public class TestConfigLoader {
 		assertTrue("20".equals(props.getProperty(Constants.PROP_GRID_WIDTH)));
 		assertTrue("10".equals(props.getProperty(Constants.PROP_GRID_HEIGHT)));
 		assertTrue("1".equals(props.getProperty(Constants.PROP_PROBABILITY)));
+		assertTrue("4,4".equals(props.getProperty(Constants.PROP_START_POSITIONS)));
 	}
 	
 	@Test
