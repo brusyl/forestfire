@@ -37,8 +37,8 @@ public class TestConfigLoader {
 		ConfigLoader loader = new ConfigLoader(dataSource);
 		Properties props = loader.loadProperties();
 		assertNotNull(props);
-		assertTrue("10".equals(props.getProperty(Constants.PROP_GRID_WIDTH)));
-		assertTrue("5".equals(props.getProperty(Constants.PROP_GRID_HEIGHT)));
+		assertTrue("10".equals(props.getProperty(Constants.PROP_GRID_COLUMNS)));
+		assertTrue("5".equals(props.getProperty(Constants.PROP_GRID_ROWS)));
 		assertTrue("0.5".equals(props.getProperty(Constants.PROP_PROBABILITY)));
 		assertTrue("3,3".equals(props.getProperty(Constants.PROP_START_POSITIONS)));
 	}
@@ -52,8 +52,8 @@ public class TestConfigLoader {
 		ConfigLoader loader = new ConfigLoader(dataSource);
 		Properties props = loader.loadProperties();
 		assertNotNull(props);
-		assertTrue("20".equals(props.getProperty(Constants.PROP_GRID_WIDTH)));
-		assertTrue("10".equals(props.getProperty(Constants.PROP_GRID_HEIGHT)));
+		assertTrue("20".equals(props.getProperty(Constants.PROP_GRID_ROWS)));
+		assertTrue("10".equals(props.getProperty(Constants.PROP_GRID_COLUMNS)));
 		assertTrue("1".equals(props.getProperty(Constants.PROP_PROBABILITY)));
 		assertTrue("4,4".equals(props.getProperty(Constants.PROP_START_POSITIONS)));
 	}

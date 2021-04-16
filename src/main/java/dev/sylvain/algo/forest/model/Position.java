@@ -6,52 +6,50 @@ package dev.sylvain.algo.forest.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * @author sbrunon
  *
  */
 public class Position {
-	private int x;
-	private int y;
+	private int row;
+	private int column;
 	
 	/**
 	 * @param x
 	 * @param y
 	 */
-	public Position(int x, int y) {
+	public Position(int row, int column) {
 		super();
-		this.x = x;
-		this.y = y;
+		this.row = row;
+		this.column = column;
 	}
 	
 	/**
-	 * @return the x
+	 * @return the column
 	 */
-	public int getX() {
-		return x;
+	public int getColumn() {
+		return column;
 	}
 
 	/**
-	 * @param x the x to set
+	 * @param column the column to set
 	 */
-	public void setX(int x) {
-		this.x = x;
+	public void setColumn(int column) {
+		this.column = column;
 	}
 
 	/**
-	 * @return the y
+	 * @return the row
 	 */
-	public int getY() {
-		return y;
+	public int getRow() {
+		return row;
 	}
 
 	/**
-	 * @param y the y to set
+	 * @param row the row to set
 	 */
-	public void setY(int y) {
-		this.y = y;
+	public void setRow(int row) {
+		this.row = row;
 	}
 
 	/**
@@ -63,7 +61,7 @@ public class Position {
 	 * @return
 	 */
 	public static final Position[] parseString(String sPositions) throws NumberFormatException {
-		if (StringUtils.isBlank(sPositions)) {
+		if (sPositions == null || sPositions.isBlank()) {
 			return null;
 		}
 		List<Position> positions = new ArrayList<Position>();

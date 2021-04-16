@@ -7,16 +7,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
-import java.io.File;
-import java.net.URL;
-import java.util.Properties;
-
 import org.junit.Test;
-
-import dev.sylvain.algo.forest.Constants;
-import dev.sylvain.algo.forest.conf.datasource.DefaultConfDataSource;
-import dev.sylvain.algo.forest.conf.datasource.FileConfDataSource;
-import dev.sylvain.algo.forest.conf.datasource.IConfDataSource;
 
 /**
  * @author sbrunon
@@ -28,8 +19,8 @@ public class TestPosition {
 	public void testConstructor() {
 		Position position = new Position(0, 1);
 		assertNotNull(position);
-		assertTrue(position.getX() == 0);
-		assertTrue(position.getY() == 1);
+		assertTrue(position.getRow() == 0);
+		assertTrue(position.getColumn() == 1);
 	}
 	
 	@Test
@@ -44,8 +35,8 @@ public class TestPosition {
 		Position[] positions = Position.parseString("1,2;1,3");
 		assertNotNull(positions);
 		assertTrue(positions.length == 2);
-		assertTrue(positions[1].getX() == 1);
-		assertTrue(positions[1].getY() == 3);
+		assertTrue(positions[1].getRow() == 1);
+		assertTrue(positions[1].getColumn() == 3);
 	}
 	
 	@Test
@@ -65,8 +56,8 @@ public class TestPosition {
 		Position[] positions = Position.parseString("1,2;1");
 		assertNotNull(positions);
 		assertTrue(positions.length == 1);
-		assertTrue(positions[0].getX() == 1);
-		assertTrue(positions[0].getY() == 2);
+		assertTrue(positions[0].getRow() == 1);
+		assertTrue(positions[0].getColumn() == 2);
 	}
 	
 	@Test
