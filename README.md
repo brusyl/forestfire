@@ -39,3 +39,35 @@ Le packaging, l’implémentation de tests, ou tout autre élément d’industri
  
 
 Note : Vous ne serez pas jugé sur la complétude de l’exercice, vous pouvez donc simplifier les consignes ou faire l’impasse sur certains éléments d’industrialisation. Mais il est important que vous apportiez du soin à la conception et au design du code. Le but est en effet de disposer de code récent de votre part afin de provoquer des discussions techniques.
+
+# Compilation
+
+mvn install
+
+# Execution
+
+En ligne de commande
+
+java -jar forest-0.0.1-SNAPSHOT.jar
+
+Paramètre:
+
+Fichier de configuration : file (chemin du fichier)
+
+Exemple d'execution avec un fichier de configuration externe : java -jar forest-0.0.1-SNAPSHOT.jar "C:\Users\sbrunon\Documents\config.properties"
+
+# Fichier de configuration
+
+Exemple
+
+grid.rows=10
+grid.columns=5
+probability=0.5
+start.positions=3,3
+
+grid.rows = Nombre de colonnes (Integer)
+grid.columns = Nombre de lignes (Integer)
+probability = Probabilité qu'une case voisine brûle. Valeur de 0 à 1. (Float)
+start.positions= Départ de feu. Exemple avec plusieurs positions : 1,3;3,7 (row,column)
+
+NB Une grille commence à 0. Dans le cas ci-dessus, position min : 0,0 et max 9,4
