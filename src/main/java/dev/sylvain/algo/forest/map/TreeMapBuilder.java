@@ -66,17 +66,13 @@ public class TreeMapBuilder implements IMapBuilder {
 		}
 		
 		GridMap map = new GridMap(rows, columns);
-//		Tree[] trees = new Tree[map.getSize()];
 		for (int row = 0; row < rows; row++) {
 			for (int col = 0; col < columns; col++) {
 				Position position = new Position(row, col);
 				Tree tree = new Tree(position);
 				map.setTile(row, col, tree);
-//				trees[map.getGridPosition(row, col)] = tree;
 			}
 		}
-		
-//		map.setTiles(trees); 
 		
 		return map;
 	}
