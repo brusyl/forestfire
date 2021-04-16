@@ -42,32 +42,52 @@ Note : Vous ne serez pas jugé sur la complétude de l’exercice, vous pouvez d
 
 # Compilation
 
+<pre>
 mvn install
+</pre>
+
 
 # Execution
 
 En ligne de commande
 
+<pre>
 java -jar forest-0.0.1-SNAPSHOT.jar
+</pre>
 
-Paramètre:
+## Utilisation d'un fichier de configuration externe
 
 Fichier de configuration : file (chemin du fichier)
 
-Exemple d'execution avec un fichier de configuration externe : java -jar forest-0.0.1-SNAPSHOT.jar "C:\Users\sbrunon\Documents\config.properties"
+Exemple d'execution avec un fichier de configuration externe : 
+
+<pre>
+java -jar forest-0.0.1-SNAPSHOT.jar "C:\Users\sbrunon\Documents\config.properties"
+</pre>
+
 
 # Fichier de configuration
 
-Exemple
+## Exemple
 
+<pre>
 grid.rows=10
 grid.columns=5
 probability=0.5
 start.positions=3,3
+</pre>
 
-grid.rows = Nombre de colonnes (Integer)
-grid.columns = Nombre de lignes (Integer)
-probability = Probabilité qu'une case voisine brûle. Valeur de 0 à 1. (Float)
-start.positions= Départ de feu. Exemple avec plusieurs positions : 1,3;3,7 (row,column)
+## Propriétés
+
+* grid.rows = Nombre de colonnes (Integer)
+* grid.columns = Nombre de lignes (Integer)
+* probability = Probabilité qu'une case voisine brûle. Valeur de 0 à 1. (Float)
+* start.positions= Départ de feu. Exemple avec plusieurs positions : 1,3;3,7 (row,column)
 
 NB Une grille commence à 0. Dans le cas ci-dessus, position min : 0,0 et max 9,4
+
+# Résultat
+
+Exemple de résultat 
+
+![Exemple](sample.png "Exemple de résultat")
